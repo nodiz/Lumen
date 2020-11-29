@@ -1,25 +1,27 @@
 # Blico
 Blind companion for Lauzhack 2020 - SBB challenge
 
-Sample detection on images
+✅ Check our detection result on unseen images here!
 https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing
 
 # Deep learning 
 
 ## Efficient det 
 -use 'sbb2coco.py' which add some missing parts to the data (area, isCrowd, imageSize)
-- download https://github.com/google/automl/tree/master/efficientdet
-- produce the tfrecord as examplained in tutorial.ipynb
+- clone and configure Google repository  (https://github.com/google/automl/tree/master/efficientdet)
+- produce the tfrecord chunks from the dataset as examplained in tutorial.ipynb
 - run training with main.py 
- - run inference with inspect.py
+- run inference with inspect.py
  
  
  ## Yolov5
  
  Very good repo because of the autoresizing anchors, capable of detect both small and big objects precisely.
  
-- use 'sbb2yolo.py' which adapt the folder structure and the annotations (xmin,ymin, w, h) to normalize(xmid, ymid, w,h)
-- download https://github.com/ultralytics/yolov5
+- use `sbb2yolo.py` which adapt the folder structure and the annotations (xmin,ymin,w,h) to normalized Yolo coordinates (xmid,ymid,w,h)
+- `git clone https://github.com/ultralytics/yolov5.git`
+- `cd yolov5/`
+- `pip install -r requirements.txt`
 - create config.yaml
 ```
 names:
@@ -31,21 +33,36 @@ nc: 4
 train: ../dyolo/images/train
 val: ../dyolo/images/val
 ```
-- configure wandb for logging (it's awesome)
+- configure `wandb` for logging (it's awesome)
 - train mutilple model such as small for edge devices, large and xlarge for best performance 
 - in our case we trained
 ```
-train.py --img-size 840 --batch 8 --epochs 20 --data config.yaml --weights yolov5x.pt --workers 6
-train.py --img-size 420 --batch 32 --resume --epochs 20 --data config.yaml --workers 4
+train.py --img-size 840 --batch 8 --epochs 20 --data config.yaml --weights yolov5x.pt
+train.py --img-size 420 --batch 32 --epochs 30 --data config.yaml --weights yolov5s.pt
 train.py --img-size 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.pt
 ```
-- export the small in jit version for android
-- evaluate the labels with which combine the xlarge and large models (exp6 and exp10 in our case) and use tta which further improve performances
+- export the small model in jit version for android
+- evaluate the labels topping accuracy: combine the xlarge and large models (exp6 and exp10 in our case) and use tta (--augment) which further improve performances
+
+
 ```
 python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt runs/train/exp10/weights/best.pt --save-txt --conf-thres 0.4 --save-conf --augment
  ```
  
-## Inferencing from pretrained weights
+ examples of sources
+
+```
+ 0  # webcam
+ file.jpg  # image 
+ file.mp4  # video
+ path/  # directory
+ path/*.jpg  # glob
+ rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa  # rtsp stream
+ rtmp://192.168.1.105/live/test  # rtmp stream
+ http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
+```
+
+## Inference with our pretrained weights
 
 - `git clone https://github.com/ultralytics/yolov5.git`
 - `cd yolov5/`
