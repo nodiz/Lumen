@@ -7,7 +7,7 @@ Blind companion for Lauzhack 2020 - SBB challenge
 # Deep learning 
 
 ## Efficient det 
--use 'sbb2coco.py' which add some missing parts to the data (area, isCrowd, imageSize)
+- use 'sbb2coco.py' which add some missing parts to the data (area, isCrowd, imageSize)
 - clone and configure Google repository  (https://github.com/google/automl/tree/master/efficientdet)
 - produce the tfrecord chunks from the dataset as examplained in tutorial.ipynb
 - run training with main.py 
