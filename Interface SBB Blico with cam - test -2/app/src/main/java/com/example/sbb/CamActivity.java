@@ -25,7 +25,7 @@ public class CamActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        classifier = new Classifier(Utils.assetFilePath(this,"mobilenet-v2.pt"));
+        classifier = new Classifier(Utils.assetFilePath(this,"last.torchscript.pt"));
 
         Button capture = findViewById(R.id.capture);
 
