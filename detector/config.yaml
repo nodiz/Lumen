@@ -1,0 +1,8 @@
+names:
+- "Door button"
+- "Open door"
+- "Door handle"
+- "Door"
+nc: 4
+train: ../dyolo/images/train
+val: ../dyolo/images/val
