@@ -61,7 +61,7 @@ Note : This photo is only to show the camera's UI. We tested the pytorch cam on 
 
 Implements the AI pytorch model yoloV5s that we trained for this use.
 
-![Alt text](screen.PNG)
+![Alt text](docpics/screen.PNG)
 
 
 
