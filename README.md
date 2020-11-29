@@ -55,7 +55,7 @@ python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt run
 - wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt
 - wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt
 - cd ..
-- python detect.py --source ../test/ --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
+- python detect.py --source ../test/ --weights pretrained/yolov5l.pt pretrained/yolov5x.pt --save-txt --conf-thres 0.4 --save-conf --augment
 
 examples of sources
 
