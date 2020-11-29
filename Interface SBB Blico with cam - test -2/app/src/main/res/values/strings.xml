@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SBB</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_result">Result</string>
+
+    <string name="save">Save</string>
+    <string name="other_arriving_location">Other Arriving Location</string>
+    <string name="other_starting_location">Other Starting Location</string>
+</resources>
