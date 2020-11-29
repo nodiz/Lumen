@@ -1,8 +1,8 @@
 # Blico
 Blind companion for Lauzhack 2020 - SBB challenge
 
-✅ Check our detection result on unseen images here!
-https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing
+✅ Check our detection result on unseen images [here](https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing)!
+
 
 # Deep learning 
 
@@ -16,7 +16,9 @@ https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sha
  
  ## Yolov5
  
- Very good repo because of the autoresizing anchors, capable of detect both small and big objects precisely.
+ Very good repo because of the autoresizing anchors, capable of detect both small (like buttons) and big objects precisely. 
+ 
+ ### Train your model
  
 - use `sbb2yolo.py` which adapt the folder structure and the annotations (xmin,ymin,w,h) to normalized Yolo coordinates (xmid,ymid,w,h)
 - `git clone https://github.com/ultralytics/yolov5.git`
@@ -84,8 +86,8 @@ examples of sources
  http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
 ```
 
-- output will be saved into runs/detect/exp[N]
-- further postprocessing step is required to adpat labels to other format, check convert_yolo_output.ipynb
+- output will be saved into `runs/detect/exp[N]`
+- further postprocessing step is required to adpat labels to other format, check `convert_yolo_output.ipynb`
 
 # The companion app
 
