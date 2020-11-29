@@ -47,9 +47,9 @@ python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt run
  
 ## Inferencing from pretrained weights
 
-- create a conda environment and install requirements (our are in detector folders)
 - `git clone https://github.com/ultralytics/yolov5.git`
 - `cd yolov5/`
+- `pip install -r requirements.txt`
 - `wget -P pretrained https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt`
 - `wget -P pretrained https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt`
 - `python detect.py --source ../test/ --weights pretrained/yolov5l.pt pretrained/yolov5x.pt --save-txt --conf-thres 0.4 --save-conf --augment`
