@@ -44,7 +44,33 @@ train.py --img 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.p
 ```
 python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt runs/train/exp10/weights/best.pt --save-txt --conf-thres 0.4 --save-conf --augment
  ```
+ 
+## Inferencing from pretrained weights
 
+-create a conda environment and install requirements (our are in detector folders)
+-git clone https://github.com/ultralytics/yolov5.git
+-cd yolov5/
+-mkdir pretrained
+-cd pretrained/
+-wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt
+-wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt
+-cd ..
+-python detect.py --source / --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
+examples of sources
+
+```
+ 0  # webcam
+      file.jpg  # image 
+      file.mp4  # video
+      path/  # directory
+      path/*.jpg  # glob
+      rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa  # rtsp stream
+      rtmp://192.168.1.105/live/test  # rtmp stream
+      http://112.50.243.8/PLTV/88888888/224/3221225900/1.m3u8  # http stream
+```
+
+- output will be saved into runs/detect/exp[N]
+- further postprocessing step is required to adpat labels to other format, check convert_yolo_output.ipynb
 
 # The companion app
 
