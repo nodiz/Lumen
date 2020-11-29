@@ -37,7 +37,7 @@ val: ../dyolo/images/val
 ```
 train.py --img-size 840 --batch 8 --epochs 20 --data config.yaml --weights yolov5x.pt --workers 6
 train.py --img-size 420 --batch 32 --resume --epochs 20 --data config.yaml --workers 4
-train.py --img 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.pt
+train.py --img-size 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.pt
 ```
 - export the small in jit version for android
 - evaluate the labels with which combine the xlarge and large models (exp6 and exp10 in our case) and use tta which further improve performances
@@ -55,7 +55,7 @@ python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt run
 - wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt
 - wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt
 - cd ..
-- python detect.py --source / --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
+- python detect.py --source ../test/ --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
 
 examples of sources
 
