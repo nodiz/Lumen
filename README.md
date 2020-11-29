@@ -44,6 +44,24 @@ train.py --img 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.p
 ```
 python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt runs/train/exp10/weights/best.pt --save-txt --conf-thres 0.4 --save-conf --augment
  ```
- 
+
+
+# The companion app
+
+Built with Kotlin (the interface) and Java (the camera and classifier) on Android Studio.
+
+- The interface is inspired from SBB's original app, after all this project has the goal of being implemented in their work.
+
+![Alt text](docpics/6ce3fc45-46a5-445a-909a-6615519a606d.jpg)
+
+- The camera is pretty simple in the purpose of assuring the UI/UX fluidity. 
+
+![Alt text](docpics/669277df-1148-4d87-b28b-d1a834641fcd.jpg)
+Note : This photo is only to show the camera's UI. We tested the pytorch cam on another predective model before impleminting the SBB train, thus the photo.
+
+Implements the AI pytorch model yoloV5s that we trained for this use.
+
+![Alt text](screen.PNG)
+
 
 
