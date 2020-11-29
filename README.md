@@ -18,7 +18,7 @@ https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sha
  
  Very good repo because of the autoresizing anchors, capable of detect both small and big objects precisely.
  
--use 'sbb2yolo.py' which adapt the folder structure and the annotations (xmin,ymin, w, h) to normalize(xmid, ymid, w,h)
+- use 'sbb2yolo.py' which adapt the folder structure and the annotations (xmin,ymin, w, h) to normalize(xmid, ymid, w,h)
 - download https://github.com/ultralytics/yolov5
 - create config.yaml
 ```
@@ -47,15 +47,16 @@ python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt run
  
 ## Inferencing from pretrained weights
 
--create a conda environment and install requirements (our are in detector folders)
--git clone https://github.com/ultralytics/yolov5.git
--cd yolov5/
--mkdir pretrained
--cd pretrained/
--wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt
--wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt
--cd ..
--python detect.py --source / --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
+- create a conda environment and install requirements (our are in detector folders)
+- git clone https://github.com/ultralytics/yolov5.git
+- cd yolov5/
+- mkdir pretrained
+- cd pretrained/
+- wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5l.pt
+- wget https://objectstorage.uk-london-1.oraclecloud.com/n/orasealps/b/LauzHack2020-noid/o/yolov5x.pt
+- cd ..
+- python detect.py --source / --weights pretrained/yolov5x.pt pretrained/yolov5l.pt --save-txt --conf-thres 0.4 --save-conf --augment
+
 examples of sources
 
 ```
