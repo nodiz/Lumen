@@ -41,7 +41,3 @@ python detect.py --source ../test/ --weights runs/train/exp6/weights/best.pt run
  
 
 
-
-Our train code 
-''
-# TBD how to use
