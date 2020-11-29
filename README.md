@@ -32,7 +32,13 @@ train: ../dyolo/images/train
 val: ../dyolo/images/val
 ```
 - configure wandb for logging (it's awesome)
-- train mutilple model such as small for edge devices, large and xlarge for best performance
+- train mutilple model such as small for edge devices, large and xlarge for best performance 
+- in our case we trained
+```
+train.py --img-size 840 --batch 8 --epochs 20 --data config.yaml --weights yolov5x.pt --workers 6
+train.py --img-size 420 --batch 32 --resume --epochs 20 --data config.yaml --workers 4
+train.py --img 640 --batch 16 --epochs 20 --data config.yaml --weights yolov5l.pt
+```
 - export the small in jit version for android
 - evaluate the labels with which combine the xlarge and large models (exp6 and exp10 in our case) and use tta which further improve performances
 ```
