@@ -1,7 +1,7 @@
 # Blico
 Blind companion for Lauzhack 2020 - Winner of the SBB challenge
 
-✅ Check our detection result on unseen images [here](https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing)!
+✅ Check our detection result on unseen images [here](https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing)! ([YouTube video](https://www.youtube.com/watch?v=M2HeJXddtcc))
 
 
 # Deep learning 
