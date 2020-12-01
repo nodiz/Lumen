@@ -95,16 +95,10 @@ Built with Kotlin (the interface) and Java (the camera and classifier) on Androi
 
 - The interface is inspired from SBB's original app, after all this project has the goal of being implemented in their work.
 
-![Alt text](doc/6ce3fc45-46a5-445a-909a-6615519a606d.jpg)
-
 - The camera is pretty simple in the purpose of assuring the UI/UX fluidity. 
 
-![Alt text](doc/669277df-1148-4d87-b28b-d1a834641fcd.jpg)
-Note : This photo is only to show the camera's UI. We tested the pytorch cam on another predective model before impleminting the SBB train, thus the photo.
-
-Implements the AI pytorch model yoloV5s that we trained for this use.
-
-![Alt text](doc/screen.PNG)
+ - Implements the AI pytorch model yoloV5s that we trained for this use.
+ 
 
 To implement the model please unzip the file from Blico/Interface SBB Blico with cam - test -2/app/src/main/assets/last.torchscript.pt.zip
 
