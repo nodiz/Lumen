@@ -3,6 +3,7 @@ Blind companion for Lauzhack 2020 - Winner of the [SBB challenge](https://devpos
 
 ✅ Check our detection result on unseen images [here](https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing)! ([YouTube video](https://www.youtube.com/watch?v=M2HeJXddtcc))
 
+<img src="Blico-min.gif" alt="Blico-min" style="width: 640px;"/>
 
 # Deep learning 
 
