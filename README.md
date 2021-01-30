@@ -98,7 +98,7 @@ Built with Kotlin (the interface) and Java (the camera and classifier) on Androi
 
 - The camera is pretty simple in the purpose of assuring the UI/UX fluidity. 
 
- - Implements the AI pytorch model yoloV5s that we trained for this use.
+- Implements the AI pytorch model yoloV5s that we trained for this use.
  
 
 To implement the model please unzip the file from Blico/Interface SBB Blico with cam - test -2/app/src/main/assets/last.torchscript.pt.zip
