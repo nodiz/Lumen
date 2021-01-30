@@ -1,4 +1,4 @@
-# Blico
+# Lumen
 Blind companion for Lauzhack 2020 - Winner of the [SBB challenge](https://devpost.com/software/blinddetector)
 
 ✅ Check our detection result on unseen images [here](https://drive.google.com/drive/folders/1NkUUpMSchJwBPQ2dK0-cBXS6_qxHkIQo?usp=sharing)! ([YouTube video](https://www.youtube.com/watch?v=M2HeJXddtcc))
