@@ -93,11 +93,11 @@ Sources examples
 - Output will be saved into `runs/detect/exp[N]`
 - Further postprocessing step is required to adpat labels to other format, check `convert_yolo_output.ipynb`
 
-# The companion app
+# The companion app (OBSOLETE, old prototype built fort Lauzhack 2020)
 
 Built with Kotlin (the interface) and Java (the camera and classifier) on Android Studio.
 
-- The interface is inspired from SBB's original app (after all this project has the goal of being implemented in their work).
+- The interface is inspired from SBB's original app.
 
 - The camera is pretty simple in the purpose of assuring the UI/UX fluidity.
 
